@@ -17,11 +17,11 @@ class PeleadoresViewModel(private val dao: PeleadorDao) : ViewModel() {
         .stateIn(viewModelScope, SharingStarted.Lazily, emptyList())
 
     private val peleadoresIniciales = listOf(
-            PeleadorModel(1, "Khabib Nurmagomedov", 29, 0, 0, "Peso Ligero", "https://example.com/khabib.jpg", 1),
-        PeleadorModel(2, "Khalil Rountree", 14, 5, 0, "Peso Semipesado", "https://example.com/khalil.jpg", 2),
-        PeleadorModel(3, "Ignacio Bahamondes", 15, 5, 0, "Peso Welter", "https://example.com/ignacio.jpg", 3),
-        PeleadorModel(4, "Demetrious Johnson", 30, 5, 1, "Peso Mosca", "https://example.com/demetrious.jpg", 4),
-        PeleadorModel(5, "Ilia Topuria", 14, 0, 0, "Peso Ligero", "https://example.com/ilia.jpg", 5)
+            PeleadorModel(1, "Khabib Nurmagomedov", 29, 0, 0, "Peso Ligero", "https://a.espncdn.com/combiner/i?img=/i/headshots/mma/players/full/2611557.png&w=350&h=254", 1),
+        PeleadorModel(2, "Khalil Rountree", 14, 5, 0, "Peso Semipesado", "https://a.espncdn.com/combiner/i?img=/i/headshots/mma/players/full/4028627.png&w=350&h=254", 2),
+        PeleadorModel(3, "Ignacio Bahamondes", 15, 5, 0, "Peso Welter", "https://a.espncdn.com/combiner/i?img=/i/headshots/mma/players/full/4038116.png&w=350&h=254", 3),
+        PeleadorModel(4, "Demetrious Johnson", 30, 5, 1, "Peso Mosca", "https://a.espncdn.com/combiner/i?img=/i/headshots/mma/players/full/2512089.png&w=350&h=254", 4),
+        PeleadorModel(5, "Ilia Topuria", 14, 0, 0, "Peso Ligero", "https://a.espncdn.com/combiner/i?img=/i/headshots/mma/players/full/4350812.png&w=350&h=254", 5)
     )
 
     init {

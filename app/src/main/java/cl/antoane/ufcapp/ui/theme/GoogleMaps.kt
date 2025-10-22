@@ -33,13 +33,13 @@ fun GoogleMaps() {
         val miUbicacion = LatLng(-33.49936500787212, -70.61654033901539)
 
 
-        val nombreLugar1 = "Lugar 1"
+        val nombreLugar1 = "Duoc UC VS Catolica UFC"
         val lugar1 = LatLng(-33.497672632070476, -70.6126025410391)
 
-        val nombreLugar2 = "Lugar 2"
+        val nombreLugar2 = "Ignacio S (DuocUC) vs Juan P (Santo Tomas)"
         val lugar2 = LatLng(-33.50104607891704, -70.61707122623334)
 
-        val nombreLugar3 = "Lugar 3"
+        val nombreLugar3 = "Diego L (Duoc UC) VS Andres M (AIEP)"
         val lugar3 = LatLng(-33.49774554586376, -70.6178305190539)
 
         val cameraPositionState = rememberCameraPositionState {
