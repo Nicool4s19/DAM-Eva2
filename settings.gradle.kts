@@ -9,6 +9,7 @@ pluginManagement {
         }
         mavenCentral()
         gradlePluginPortal()
+        maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
     }
 }
 dependencyResolutionManagement {
@@ -17,8 +18,12 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
     }
+    versionCatalogs {
+        create("libs") {
+
+        }
+    }
 }
 
 rootProject.name = "UfcApp"
 include(":app")
- 
