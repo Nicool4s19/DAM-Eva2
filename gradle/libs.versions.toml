@@ -52,7 +52,7 @@ androidx-room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = 
 play-services-maps = { group = "com.google.android.gms", name = "play-services-maps", version.ref = "playServicesMaps" }
 
 [plugins]
-android-application = { id = "com.android.application", version = "8.13.0" }
+android-application = { id = "com.android.application", version = "8.13.1" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }

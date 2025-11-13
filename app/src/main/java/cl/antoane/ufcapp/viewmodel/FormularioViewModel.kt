@@ -9,5 +9,11 @@ class FormularioViewModel : ViewModel() {
     fun verificarNombre() = formulario.nombre.isNotBlank()
     fun verificarCorreo() = Patterns.EMAIL_ADDRESS.matcher(formulario.correo).matches()
     fun verificarEdad() = formulario.edad.toIntOrNull()?.let { it in 18..100 } ?: false
-    fun verificarFormulario() = verificarNombre() && verificarCorreo() && verificarEdad() && formulario.terminos
+    fun verificarContrasena() = formulario.contrasena.length >= 6
+
+    fun verificarFormulario() = verificarNombre() &&
+                                verificarCorreo() &&
+                                verificarEdad() &&
+                                verificarContrasena() &&
+                                formulario.terminos
 }

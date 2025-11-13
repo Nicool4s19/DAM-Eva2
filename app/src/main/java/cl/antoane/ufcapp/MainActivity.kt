@@ -36,6 +36,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             UfcApp2Theme {
                 Surface(modifier = Modifier.fillMaxSize()) {
+
                     val navController = rememberNavController()
                     val context = LocalContext.current
 
@@ -47,17 +48,29 @@ class MainActivity : ComponentActivity() {
 
                     NavHost(
                         navController = navController,
-                        startDestination = "formulario"
+                        startDestination = "inicio"
                     ) {
+
+                        composable("inicio") {
+                            PantallaInicio(navController = navController)
+                        }
+
+                        composable("login") {
+                            Login(navController = navController)
+                        }
+
                         composable("formulario") {
                             Formulario(viewModel = formularioViewModel, navController = navController)
                         }
+
                         composable("menu") {
                             Menu(navController = navController)
                         }
+
                         composable("peleadores") {
                             Peleadores(navController = navController, viewModel = peleadoresViewModel)
                         }
+
                         composable("mapa") {
                             MapWithGPS()
                         }

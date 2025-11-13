@@ -11,12 +11,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import cl.antoane.ufcapp.viewmodel.FormularioViewModel
 import kotlinx.coroutines.delay
 import cl.antoane.ufcapp.R
-
 
 @Composable
 fun Formulario(
@@ -59,26 +59,10 @@ fun Formulario(
                 colors = OutlinedTextFieldDefaults.colors(
                     focusedTextColor = Color.Black,
                     unfocusedTextColor = Color.Black,
-                    disabledTextColor = Color.Gray,
                     errorTextColor = Color.Red,
-                    focusedContainerColor = Color.Transparent,
-                    unfocusedContainerColor = Color.Transparent,
-                    disabledContainerColor = Color.Transparent,
-                    errorContainerColor = Color.Transparent,
-                    cursorColor = Color.Black,
-                    errorCursorColor = Color.Red,
                     focusedBorderColor = Color.Black,
                     unfocusedBorderColor = Color.Gray,
-                    disabledBorderColor = Color.Gray,
-                    errorBorderColor = Color.Red,
-                    focusedLabelColor = Color.Black,
-                    unfocusedLabelColor = Color.Gray,
-                    disabledLabelColor = Color.Gray,
-                    errorLabelColor = Color.Red,
-                    focusedPlaceholderColor = Color.Gray,
-                    unfocusedPlaceholderColor = Color.Gray,
-                    disabledPlaceholderColor = Color.Gray,
-                    errorPlaceholderColor = Color.Red
+                    errorBorderColor = Color.Red
                 )
             )
             Spacer(modifier = Modifier.height(8.dp))
@@ -91,26 +75,10 @@ fun Formulario(
                 colors = OutlinedTextFieldDefaults.colors(
                     focusedTextColor = Color.Black,
                     unfocusedTextColor = Color.Black,
-                    disabledTextColor = Color.Gray,
                     errorTextColor = Color.Red,
-                    focusedContainerColor = Color.Transparent,
-                    unfocusedContainerColor = Color.Transparent,
-                    disabledContainerColor = Color.Transparent,
-                    errorContainerColor = Color.Transparent,
-                    cursorColor = Color.Black,
-                    errorCursorColor = Color.Red,
                     focusedBorderColor = Color.Black,
                     unfocusedBorderColor = Color.Gray,
-                    disabledBorderColor = Color.Gray,
-                    errorBorderColor = Color.Red,
-                    focusedLabelColor = Color.Black,
-                    unfocusedLabelColor = Color.Gray,
-                    disabledLabelColor = Color.Gray,
-                    errorLabelColor = Color.Red,
-                    focusedPlaceholderColor = Color.Gray,
-                    unfocusedPlaceholderColor = Color.Gray,
-                    disabledPlaceholderColor = Color.Gray,
-                    errorPlaceholderColor = Color.Red
+                    errorBorderColor = Color.Red
                 )
             )
             Spacer(modifier = Modifier.height(8.dp))
@@ -123,26 +91,27 @@ fun Formulario(
                 colors = OutlinedTextFieldDefaults.colors(
                     focusedTextColor = Color.Black,
                     unfocusedTextColor = Color.Black,
-                    disabledTextColor = Color.Gray,
                     errorTextColor = Color.Red,
-                    focusedContainerColor = Color.Transparent,
-                    unfocusedContainerColor = Color.Transparent,
-                    disabledContainerColor = Color.Transparent,
-                    errorContainerColor = Color.Transparent,
-                    cursorColor = Color.Black,
-                    errorCursorColor = Color.Red,
                     focusedBorderColor = Color.Black,
                     unfocusedBorderColor = Color.Gray,
-                    disabledBorderColor = Color.Gray,
-                    errorBorderColor = Color.Red,
-                    focusedLabelColor = Color.Black,
-                    unfocusedLabelColor = Color.Gray,
-                    disabledLabelColor = Color.Gray,
-                    errorLabelColor = Color.Red,
-                    focusedPlaceholderColor = Color.Gray,
-                    unfocusedPlaceholderColor = Color.Gray,
-                    disabledPlaceholderColor = Color.Gray,
-                    errorPlaceholderColor = Color.Red
+                    errorBorderColor = Color.Red
+                )
+            )
+            Spacer(modifier = Modifier.height(8.dp))
+
+            OutlinedTextField(
+                value = viewModel.formulario.contrasena,
+                onValueChange = { viewModel.formulario.contrasena = it },
+                label = { Text("Ingresa contraseña", color = Color.Black) },
+                isError = !viewModel.verificarContrasena(),
+                visualTransformation = PasswordVisualTransformation(), // Oculta los caracteres
+                colors = OutlinedTextFieldDefaults.colors(
+                    focusedTextColor = Color.Black,
+                    unfocusedTextColor = Color.Black,
+                    errorTextColor = Color.Red,
+                    focusedBorderColor = Color.Black,
+                    unfocusedBorderColor = Color.Gray,
+                    errorBorderColor = Color.Red
                 )
             )
             Spacer(modifier = Modifier.height(8.dp))
@@ -207,4 +176,3 @@ fun Formulario(
         }
     }
 }
-

@@ -8,21 +8,36 @@ import androidx.navigation.compose.composable
 import cl.antoane.ufcapp.viewmodel.FormularioViewModel
 import cl.antoane.ufcapp.viewmodel.PeleadoresViewModel
 
-
 @Composable
 fun Navegacion(navController: NavHostController) {
-    NavHost(navController = navController, startDestination = "formulario") {
+
+    NavHost(
+        navController = navController,
+        startDestination = "inicio"
+    ) {
+
+        composable("inicio") {
+            PantallaInicio(navController)
+        }
+
+        composable("login") {
+            Login(navController)
+        }
+
         composable("formulario") {
             val viewModel: FormularioViewModel = viewModel()
             Formulario(navController = navController, viewModel = viewModel)
         }
+
         composable("menu") {
             Menu(navController = navController)
         }
+
         composable("peleadores") {
             val viewModel: PeleadoresViewModel = viewModel()
             Peleadores(navController = navController, viewModel = viewModel)
         }
+
         composable("gps") {
             Gps(navController = navController)
         }

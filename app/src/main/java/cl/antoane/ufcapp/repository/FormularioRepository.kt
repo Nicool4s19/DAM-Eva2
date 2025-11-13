@@ -32,6 +32,12 @@ class FormularioRepository {
             return true
     }
 
+    fun validacionConstrasena(): Boolean {
+        if (formulario.contrasena.length < 6)
+            return false
+        else
+            return true
+    }
     fun validacionTerminos(): Boolean {
         if (!formulario.terminos)
             return false
