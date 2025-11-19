@@ -12,9 +12,13 @@ object DataBaseProvider {
                 context.applicationContext,
                 AppDataBase::class.java,
                 "app_database"
-            ).build()
+            )
+                .fallbackToDestructiveMigration()
+                .build()
+
             INSTANCE = instance
             instance
         }
     }
 }
+
