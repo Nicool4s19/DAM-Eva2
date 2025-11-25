@@ -56,7 +56,6 @@ fun Peleadores(
 
         Spacer(modifier = Modifier.height(16.dp))
 
-
         LazyColumn(
             modifier = Modifier.fillMaxSize()
         ) {

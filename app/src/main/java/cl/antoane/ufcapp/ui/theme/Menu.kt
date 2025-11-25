@@ -109,6 +109,18 @@ fun Menu(navController: NavController) {
             ) {
                 Text("Notificaciones", color = Color.White, fontSize = 18.sp)
             }
+
+            Button(
+                onClick = {
+                    navController.navigate("inicio") {
+                        popUpTo("menu") { inclusive = true }
+                    }
+                },
+                modifier = buttonModifier,
+                colors = ButtonDefaults.buttonColors(containerColor = Color.Black.copy(alpha = 0.4f))
+            ) {
+                Text("Cerrar sesión", color = Color.White, fontSize = 18.sp)
+            }
         }
     }
 }
